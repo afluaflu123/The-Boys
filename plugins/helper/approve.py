@@ -15,7 +15,7 @@ async def autoapprove(client, message: ChatJoinRequest):
     chat=message.chat 
     user=message.from_user 
     print("user isn't start bot(means group)")
-    except Exception as err:
+except Exception as err:
     print(str(err))    
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
     if APPROVED == "on":

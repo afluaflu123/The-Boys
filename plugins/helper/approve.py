@@ -12,13 +12,13 @@ gif = [
 
 @Client.on_chat_join_request((filters.group | filters.channel) & filters.chat(CHAT_ID) if CHAT_ID else (filters.group | filters.channel) & filters.private)
 async def autoapprove(client, message: ChatJoinRequest):
-    chat=message.chat 
-    user=message.from_user 
-    print("user isn't start bot(means group)")
-except Exception as err:
-    print(str(err))    
-    await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
-    if APPROVED == "on":
+        chat=message.chat 
+        user=message.from_user 
+        print("user isn't start bot(means group)")
+    except Exception as err:
+        print(str(err))    
+        await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
+        if APPROVED == "on":
         img = random.choice(gif)
         await client.send_video(chat_id=chat.id,img, text=TEXT.format(mention=user.mention, title=chat.title))
 

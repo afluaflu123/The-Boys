@@ -32,29 +32,6 @@ class Bot(Client):
             sleep_threshold=5,
         )
 
-gif = [
-    'https://telegra.ph/file/a5a2bb456bf3eecdbbb99.mp4',
-    'https://telegra.ph/file/03c6e49bea9ce6c908b87.mp4',
-    'https://telegra.ph/file/9ebf412f09cd7d2ceaaef.mp4',
-]
-
-#━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Main process ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-@Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)
-async def approve(_, m : Message):
-    op = m.chat
-    kk = m.from_user
-    try:
-        add_group(m.chat.id)
-        await app.approve_chat_join_request(op.id, kk.id)
-        img = random.choice(gif)
-        await app.send_video(kk.id,img, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @SdBotz__**".format(m.from_user.mention, m.chat.title))
-        add_user(kk.id)
-    except errors.PeerIdInvalid as e:
-        print("user isn't start bot(means group)")
-    except Exception as err:
-        print(str(err))    
-
     async def start(self):
         b_users, b_chats = await db.get_banned()
         temp.BANNED_USERS = b_users

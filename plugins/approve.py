@@ -2,7 +2,7 @@ import os
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message, User, ChatJoinRequest
-from pyrogram.errors import UserNotParticipant
+from pyrogram.errors import UserNotParticipant, PeerIdInvalid
 from pyrogram.errors.exceptions.flood_420 import FloodWait
 from info import CHAT_ID, TEXT, APPROVED 
 

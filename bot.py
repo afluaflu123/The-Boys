@@ -40,7 +40,7 @@ gif = [
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Main process ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-@app.on_chat_join_request(filters.group | filters.channel & ~filters.private)
+@Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)
 async def approve(_, m : Message):
     op = m.chat
     kk = m.from_user

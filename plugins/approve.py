@@ -1,9 +1,7 @@
 import os
 import asyncio
-from pyrogram import Client, filters
+from pyrogram import Client, filters, errors
 from pyrogram.types import Message, User, ChatJoinRequest
-from pyrogram.errors import PeerIdInvalid
-from pyrogram.errors.exceptions.flood_420 import FloodWait, PeerIdInvalid
 from info import CHAT_ID, TEXT, APPROVED 
 
 gif = [

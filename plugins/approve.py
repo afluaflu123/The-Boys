@@ -26,7 +26,7 @@ async def approve(bot, Message):
         add_group(message.chat.id)
         await bot.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
         img = random.choice(gif)
-        await bot.send_video(user.id=img, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @SdBotz__**".format(m.from_user.mention, m.chat.title))
+        await bot.send_video(user.id,img, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @SdBotz__**".format(m.from_user.mention, m.chat.title))
         add_user(user.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")

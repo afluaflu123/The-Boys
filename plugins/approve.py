@@ -12,4 +12,4 @@ async def autoapprove(bot, message: ChatJoinRequest):
     print(f"{user.first_name} Joined (Approved)") 
     await bot.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
     if APPROVED == "on":
-        await bot.send_message(message.from_user=message.from_user, text=TEXT.format(mention=user.mention, title=chat.title))
+        await bot.send_message(chat_id=message.from_user, text=TEXT.format(mention=user.mention, title=chat.title))

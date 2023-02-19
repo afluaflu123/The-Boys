@@ -2,7 +2,7 @@ import os
 import asyncio
 from pyrogram import Client, errors, filters
 from pyrogram.types import Message, User, ChatJoinRequest
-from database import add_user, add_group
+from users_chats_db.py import add_user, add_group
 from info import TEXT, APPROVED 
 
 gif = [

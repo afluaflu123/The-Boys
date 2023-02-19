@@ -26,4 +26,4 @@ async def autoapprove(bot, message: ChatJoinRequest):
     await bot.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
     if APPROVED == "on":
         img = random.choice(gif)
-        await bot.send_video(user.id,img, text=TEXT.format(mention=user.mention, title=chat.title))
+        await bot.send_video(chat_id=userid,img, text=TEXT.format(mention=user.mention, title=chat.title))

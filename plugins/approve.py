@@ -5,7 +5,7 @@ from pyrogram.types import Message, User, ChatJoinRequest
 from info import TEXT, APPROVED 
 
 @Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)
-async def approve(bot, message):
+async def approve(client, message):
     chat=message.chat 
     user=message.from_user 
     print(f"{user.first_name} Joined (Approved)") 

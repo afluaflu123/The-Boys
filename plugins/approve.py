@@ -19,7 +19,7 @@ gif = [
 ]
 
 @Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)
-async def approve(bot, Message):
+async def approve(bot, message):
     chat=message.chat 
     user=message.from_user 
     try:

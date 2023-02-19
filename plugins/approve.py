@@ -1,6 +1,6 @@
 import os
 import asyncio
-from pyrogram import Client, filters
+from pyrogram import Client, filters, errors
 from pyrogram.types import Message, User, ChatJoinRequest
 from info import TEXT, APPROVED 
 

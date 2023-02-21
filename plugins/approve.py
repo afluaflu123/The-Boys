@@ -10,4 +10,4 @@ async def approve(client, message):
     user=message.from_user 
     print(f"{user.first_name} Joined (Approved)") 
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
-    await client.send_message(chat_id=chat.id, text=TEXT.format(mention=user.mention, title=chat.title))
+    await client.send_message(chat_id=message.from_user.id, text=TEXT.format(mention=user.mention, title=chat.title))

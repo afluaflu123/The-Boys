@@ -1235,13 +1235,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                          callback_data=f'setgs#max_btn#{settings["max_btn"]}#{str(grp_id)}'),
                     InlineKeyboardButton('10' if settings["max_btn"] else f'{MAX_B_TN}',
                                          callback_data=f'setgs#max_btn#{settings["max_btn"]}#{str(grp_id)}')
-                ],
-                [
-                    InlineKeyboardButton('ShortLink',
-                                         callback_data=f'setgs#is_shortlink#{settings["is_shortlink"]}#{str(grp_id)}'),
-                    InlineKeyboardButton('✔ Oɴ' if settings["is_shortlink"] else '✘ Oғғ',
-                                         callback_data=f'setgs#is_shortlink#{settings["is_shortlink"]}#{str(grp_id)}')
-                ]
+                ]               
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
@@ -1270,63 +1264,33 @@ async def auto_filter(client, msg, spoll=False):
         else:
             return
     else:
+        settings = await get_settings(msg.message.chat.id)
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-    settings = await get_settings(message.chat.id)
-    if 'is_shortlink' in settings.keys():
-        ENABLE_SHORTLINK = settings['is_shortlink']
-    else:
-        await save_group_settings(message.chat.id, 'is_shortlink', False)
-        ENABLE_SHORTLINK = False
     pre = 'filep' if settings['file_secure'] else 'file'
-    if ENABLE_SHORTLINK == True:
-        if settings["button"]:
-            btn = [
-                [
-                    InlineKeyboardButton(
-                        text=f"[{get_size(file.file_size)}] {file.file_name}", url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
-                    ),
-                ]
-                for file in files
+    if settings["button"]:
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                ),
             ]
-        else:
-            btn = [
-                [
-                    InlineKeyboardButton(
-                        text=f"{file.file_name}",
-                        url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
-                    ),
-                    InlineKeyboardButton(
-                        text=f"{get_size(file.file_size)}",
-                        url=await get_shortlink(message.chat.id, f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}")
-                    ),
-                ]
-                for file in files
-            ]
+            for file in files
+        ]
     else:
-        if settings["button"]:
-            btn = [
-                [
-                    InlineKeyboardButton(
-                        text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
-                    ),
-                ]
-                for file in files
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"{file.file_name}",
+                    callback_data=f'{pre}#{file.file_id}',
+                ),
+                InlineKeyboardButton(
+                    text=f"{get_size(file.file_size)}",
+                    callback_data=f'{pre}#{file.file_id}',
+                ),
             ]
-        else:
-            btn = [
-                [
-                    InlineKeyboardButton(
-                        text=f"{file.file_name}",
-                        callback_data=f'{pre}#{file.file_id}',
-                    ),
-                    InlineKeyboardButton(
-                        text=f"{get_size(file.file_size)}",
-                        callback_data=f'{pre}#{file.file_id}',
-                    ),
-                ]
-                for file in files
-            ]
+            for file in files
+        ]
 
     try:
         if settings['auto_delete']:

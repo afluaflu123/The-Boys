@@ -24,7 +24,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/25c8bd93f8d5f787c188e.jpg https://telegra.ph/file/b1afff9eed3244abb9f39.jpg https://telegra.ph/file/39e246de80d814ff8bdfd.jpg')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/2581860836bb79b97d6d1.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/2581860836bb79b97d6d1.jpg")
-TEXT = environ.get("APPROVED_WELCOME_TEXT", "Hello {mention}\nWelcome To {title}\n\nYour request has been approved")
+TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>Hello 👋 {mention} Your Request To Join {title} Was Approved 🔥.</b>\n\n  <b>•➤ JOIN:- @Team_KL •|• @KL_GROUP1</b>")
 NANCY = environ.get("NANCY", "https://telegra.ph/file/39e246de80d814ff8bdfd.jpg")
 
 # Admins, Channels & Users

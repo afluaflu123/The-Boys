@@ -2,6 +2,7 @@ import os
 import asyncio
 from pyrogram import Client, filters, errors
 from pyrogram.types import Message, User, ChatJoinRequest 
+from info import TEXT
 
 @Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)
 async def approve(client, message):

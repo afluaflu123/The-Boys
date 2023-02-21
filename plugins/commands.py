@@ -266,10 +266,10 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                   ],[
-                      InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/creatorbeatz")
+                        InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
+                        InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                     ],[
+                        InlineKeyboardButton('🤝 Sʜᴀʀᴇ Mᴇ', url=f'https://t.me/share/url?url=https://t.me/Oru_adaar_Robot')
                      ]
                     ]
                 )
@@ -309,10 +309,10 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-           ],[
-              InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/creatorbeatz")
+                InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
+                InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+             ],[
+                InlineKeyboardButton('🤝 Sʜᴀʀᴇ Mᴇ', url=f'https://t.me/share/url?url=https://t.me/Oru_adaar_Robot')
              ]
             ]
         )
@@ -414,12 +414,12 @@ async def delete_all_index(bot, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="YES", callback_data="autofilter_delete"
+                        text="😃 YES", callback_data="autofilter_delete"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        text="CANCEL", callback_data="close_data"
+                        text="🥺 CANCEL", callback_data="close_data"
                     )
                 ],
             ]

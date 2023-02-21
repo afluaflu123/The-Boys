@@ -25,7 +25,7 @@ PICS = (environ.get('PICS', 'https://telegra.ph/file/25c8bd93f8d5f787c188e.jpg h
 NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/2581860836bb79b97d6d1.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/2581860836bb79b97d6d1.jpg")
 TEXT = environ.get("APPROVED_WELCOME_TEXT", "Hello {mention}\nWelcome To {title}\n\nYour request has been approved")
-NANCY = environ.get("SPELL_IMG", "https://telegra.ph/file/2581860836bb79b97d6d1.jpg")
+NANCY = environ.get("NANCY", "https://telegra.ph/file/39e246de80d814ff8bdfd.jpg")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]

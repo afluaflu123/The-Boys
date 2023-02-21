@@ -1,5 +1,6 @@
 import os
 import asyncio
+import random
 from pyrogram import Client, filters, errors
 from pyrogram.types import Message, User, ChatJoinRequest 
 from info import TEXT, NANCY

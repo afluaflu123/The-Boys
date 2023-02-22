@@ -977,6 +977,34 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "source":
+        buttons = [[
+            InlineKeyboardButton('ᴛɢʀᴀᴘʜ', callback_data='tgraph'),
+            InlineKeyboardButton('sᴛɪᴄᴋᴇʀ', callback_data='stickerid'),
+            InlineKeyboardButton('ᴘasᴡᴏʀᴅ', callback_data='genpassword')
+            ],[
+            InlineKeyboardButton('ᴄᴏʀᴏɴᴀ', callback_data='corona'),
+            InlineKeyboardButton('ʀᴇᴘᴏʀᴛs', callback_data='report'),
+            InlineKeyboardButton('ᴀᴅᴅ ꜰɪʟᴇs', callback_data='addfle')
+            ],[
+            InlineKeyboardButton('ᴜʀʟ sʜᴏʀᴛ', callback_data='shortner'),
+            InlineKeyboardButton('ᴢᴏᴍʙɪᴇs', callback_data='zombies'),
+            InlineKeyboardButton('ᴛᴛ-sᴘᴇᴇᴄʜ', callback_data='tts')
+            ],[
+            InlineKeyboardButton('ɢᴛʀᴀɴs', callback_data='gtrans'),
+            InlineKeyboardButton('ᴊsᴏɴ', callback_data='json'),
+            InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats')
+            ],[
+            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ 🔐', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.HACKER_TXT.format(query.from_user.mention),
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('🧑‍💻 Dᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/Hacker_Jr'),
@@ -1009,7 +1037,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("നീ ഏതാ..... ഒന്ന് പോടെയ് അവൻ Source Code ചോയ്ച്ച് വന്നിരിക്കുന്നു. നോക്കി ഇരുന്നോ, ഇപ്പൊ കിട്ടും. 😂 മാമനൊടു ഒന്നും തോന്നല്ലേ മക്കളേ. 😊",show_alert=True)
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='about')
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(

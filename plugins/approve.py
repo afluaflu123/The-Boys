@@ -24,7 +24,7 @@ async def approve(client, message):
               ],[       
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
             ]]
-    await client.send_messages_photo(
+    await client.send_photo(
         chat_id=message.from_user.id,
         photo=random.choice(PHOTOS),
         text=TEXT.format(mention=user.mention, title=chat.title),

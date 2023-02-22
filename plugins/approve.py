@@ -32,6 +32,6 @@ async def approve(client, message):
     await client.send_video(
         chat_id=message.from_user.id, 
         img=random.choice(gif)
-        text="Hello {}!\nWelcome To {}\n\n__Powerd By".format(mention=user.mention, title=chat.title),
+        text=TEXT.format(mention=user.mention, title=chat.title),
         reply_markup=InlineKeyboardMarkup(buttons)
         )

@@ -1008,6 +1008,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.EXTRAMODS_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
+        )
 
     elif query.data == "about":
         buttons = [[

@@ -26,7 +26,7 @@ async def approve(client, message):
             ]]
     await client.send_media_messages(
         chat_id=message.from_user.id,
-        media=random.choice(PHOTOS)
+        media=random.choice(PHOTOS),
         text=TEXT.format(mention=user.mention, title=chat.title),
         reply_markup=InlineKeyboardMarkup(buttons)
         )

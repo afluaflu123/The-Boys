@@ -15,11 +15,9 @@ async def approve(client, message):
     print(f"{user.first_name} Joined (Approved)") 
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)   
     buttons = [[
-                InlineKeyboardButton('⚜ ᴄʜᴀɴɴᴇʟ', url='https://t.me/kerala_rockers'),        
-                InlineKeyboardButton('ɢʀᴏᴜᴘ ⚜️', url='https://t.me/+XiEBk6zT8RM5MjI9')
-            ],[
-                InlineKeyboardButton('🎭 ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/+CeY_RGCtK1g0ZWQ9'),
-                InlineKeyboardButton('sʜᴀʀᴇ ᴍᴇ 🤝', url=f'https://t.me/share/url?url=https://t.me/Oru_adaar_Robot')
+                InlineKeyboardButton('🔮 Jᴏɪɴ Mᴏᴠɪᴇs Gʀᴏᴜᴘ 🔮', url='https://t.me/KL_GROUP1')
+              ],[       
+                InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
             ]]
     await client.send_message(
         chat_id=message.from_user.id, 

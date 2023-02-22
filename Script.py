@@ -75,6 +75,7 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs..</b>"""
 • /search  - <code>ɢᴇᴛ ᴛʜᴇ ꜰɪʟᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ꜰʀᴏᴍ ᴠᴀʀɪᴏᴜꜱ ꜱᴏᴜʀᴄᴇꜱ.</code>"""
 
     APPROVE_TXT = """<b>🤖 Hᴇʟᴘ: Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇ
+
 I'ᴍ Aɴ Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇ <a href='https://t.me/telegram/153'>Aᴅᴍɪɴ Jᴏɪɴ Rᴇǫᴜᴇsᴛs Bᴏᴛ</a>.
 
 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀɴɴᴇʟs Aɴᴅ Gʀᴏᴜᴘs Mᴇ Tᴏ Aᴅᴍɪɴ Wɪᴛʜ Aᴅᴅ Mᴇᴍʙᴇʀs Pᴇʀᴍɪssɪᴏɴ. ☺️

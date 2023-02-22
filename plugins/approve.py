@@ -24,7 +24,7 @@ async def approve(client, message):
                 InlineKeyboardButton('🔮 Jᴏɪɴ Mᴏᴠɪᴇs Gʀᴏᴜᴘ 🔮', url='https://t.me/KL_GROUP1')
               ],[       
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
-            ]]     
+              ]]     
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_photo(
         photo=random.choice(PHOTOS),

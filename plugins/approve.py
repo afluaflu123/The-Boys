@@ -1,7 +1,7 @@
 import os
 import asyncio, random
 from pyrogram import Client, filters, errors
-from pyrogram.types import Message, User, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import Message, User, InlineKeyboardMarkup, InlineKeyboardButton, ChatPermissions
 from info import TEXT
 
 PHOTOS = [
@@ -24,9 +24,9 @@ async def approve(client, message):
               ],[       
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
             ]]
-    await client.send_photo(
+    await client.send_stickers(
         chat_id=message.from_user.id,
-        photo=random.choice(PHOTOS),
+        stickers=random.choice(PHOTOS),
         text=TEXT.format(mention=user.mention, title=chat.title),
         reply_markup=InlineKeyboardMarkup(buttons)
         )

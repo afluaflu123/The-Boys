@@ -1,7 +1,7 @@
 import os
 import asyncio, random
 from pyrogram import Client, filters, errors
-from pyrogram.types import Message, User, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import Message, User, InlineKeyboardMarkup, InlineKeyboardButton, ChatPermissions
 from info import TEXT
 
 PHOTOS = [

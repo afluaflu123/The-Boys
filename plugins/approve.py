@@ -2,7 +2,7 @@ import os
 import asyncio, random
 from pyrogram import Client, filters, errors
 from pyrogram.types import Message, User, InlineKeyboardMarkup, InlineKeyboardButton, ChatPermissions
-from info import TEXT
+from info import TEXT, LOG_CHANNEL
 
 PHOTOS = [
          "https://telegra.ph/file/ad57acb6a695288baef12.jpg",
@@ -18,15 +18,16 @@ async def approve(client, message):
     chat=message.chat 
     user=message.from_user 
     print(f"{user.first_name} Joined (Approved)") 
-    await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)   
+    await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)       
+    await client.send_message(chat_id=message.from_user.id, Script.LOG_TEXT_P.format(mention=user.mention, title=chat.title)  
     buttons = [[
                 InlineKeyboardButton('🔮 Jᴏɪɴ Mᴏᴠɪᴇs Gʀᴏᴜᴘ 🔮', url='https://t.me/KL_GROUP1')
               ],[       
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
-            ]]
-    await client.send_stickers(
-        chat_id=message.from_user.id,
-        stickers=random.choice(PHOTOS),
-        text=TEXT.format(mention=user.mention, title=chat.title),
-        reply_markup=InlineKeyboardMarkup(buttons)
-        )
+            ]]     
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await message.reply_photo(
+        photo=random.choice(PHOTOS),
+        caption=TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+        reply_markup=reply_markup,
+    )

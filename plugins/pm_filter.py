@@ -945,14 +945,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('😈 Mᴏʀᴇ Fᴇᴀᴛᴜʀᴇs 😈', callback_data='extramonds')
-        ], [
             InlineKeyboardButton('FIʟᴛᴇʀs', callback_data='filters'),
             InlineKeyboardButton('Fɪʟᴇ Sᴛᴏʀᴇ', callback_data='store_file')
         ], [
             InlineKeyboardButton('Cᴏɴɴᴇᴄᴛɪᴏɴ', callback_data='coct'),
             InlineKeyboardButton('Exᴛʀᴀ Mᴏᴅs', callback_data='extra')
-        ], [          
+        ], [  
+            InlineKeyboardButton('Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇ', callback_data='approve')
+        ], [        
             InlineKeyboardButton('🏠 Hᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('🔮 Sᴛᴀᴛᴜs', callback_data='stats')
         ]]
@@ -974,38 +974,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )       
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-    elif query.data == "extramonds":
-        buttons = [[
-            InlineKeyboardButton('ᴛɢʀᴀᴘʜ', callback_data='tgraph'),
-            InlineKeyboardButton('sᴛɪᴄᴋᴇʀ', callback_data='stickerid'),
-            InlineKeyboardButton('ᴘasᴡᴏʀᴅ', callback_data='genpassword')
-            ],[
-            InlineKeyboardButton('ᴄᴏʀᴏɴᴀ', callback_data='corona'),
-            InlineKeyboardButton('ʀᴇᴘᴏʀᴛs', callback_data='report'),
-            InlineKeyboardButton('ᴀᴅᴅ ꜰɪʟᴇs', callback_data='addfle')
-            ],[
-            InlineKeyboardButton('ᴜʀʟ sʜᴏʀᴛ', callback_data='shortner'),
-            InlineKeyboardButton('ᴢᴏᴍʙɪᴇs', callback_data='zombies'),
-            InlineKeyboardButton('ᴛᴛ-sᴘᴇᴇᴄʜ', callback_data='tts')
-            ],[
-            InlineKeyboardButton('ɢᴛʀᴀɴs', callback_data='gtrans'),
-            InlineKeyboardButton('ᴊsᴏɴ', callback_data='json'),
-            InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats')
-            ],[
-            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help'),
-            InlineKeyboardButton('ᴄʟᴏsᴇ 🔐', callback_data='close_data')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        await query.message.edit_text(
-            text=script.EXTRAMODS_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -1052,6 +1020,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.message.edit_text(
             text=script.SOURCE_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "approve":
+        buttons = [[
+            InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.APPROVE_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )

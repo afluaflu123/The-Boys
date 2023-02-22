@@ -19,8 +19,9 @@ async def approve(client, message):
               ],[       
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
             ]]
-    await message.send_text(
+    await client.send_photo(
         chat_id=message.from_user.id, 
+        photo="https://telegra.ph/file/51fdcccb41510ff8af8b1.jpg",
         text=TEXT.format(mention=user.mention, title=chat.title),
         reply_markup=InlineKeyboardMarkup(buttons)
         )

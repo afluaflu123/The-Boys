@@ -16,7 +16,7 @@ async def approve(client, message):
               ],[       
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
             ]]
-    await client.send_message(chat_id=message.from_user.id, text=(script.NORSLTS.format(mention=user.mention, title=chat.title)))
+    await client.send_message(chat_id=message.from_user.id, text=TEXT)
     await msg.reply_photo(
         photo=SPELL_IMG, 
         caption=TEXT.format(mention=user.mention, title=chat.title),

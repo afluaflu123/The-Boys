@@ -18,6 +18,6 @@ async def approve(client, message):
             ]]
     await client.send_message(
         chat_id=message.from_user.id),
-        text=TEXT.format(mention=user.mention, title=chat.title),
+        text=TEXT.format(mention=user.mention, title=chat.title)
         reply_markup=InlineKeyboardMarkup(buttons)
         )

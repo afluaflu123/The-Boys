@@ -16,6 +16,6 @@ async def approve(client, message: ChatJoinRequest):
               ],[       
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
             ]]
-    await client.send_photo(chat_id=message.from_user.id, photo=random.choice(PICS), text=TEXT.format(mention=user.mention, title=chat.title),
+    await client.send_photo(chat_id=message.from_user.id, photo=random.choice(PICS), "**Hello {}!\nWelcome To {}\n\n__Powerd By : @SdBotz__**".format(mention=user.mention, title=chat.title),
         reply_markup=InlineKeyboardMarkup(buttons)
         )

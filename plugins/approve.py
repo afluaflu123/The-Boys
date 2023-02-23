@@ -17,7 +17,7 @@ async def approve(client, message):
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
             ]]
     await client.send_message(
-        chat_id=message.from_user.id),
-        text=TEXT.format(mention=user.mention, title=chat.title)
+        chat_id=message.from_user.id,
+        text=TEXT.format(mention=user.mention, title=chat.title),
         reply_markup=InlineKeyboardMarkup(buttons)
         )

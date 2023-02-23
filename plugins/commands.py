@@ -44,11 +44,9 @@ async def start(client, message):
                     InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('🔍 Sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-                    InlineKeyboardButton('🤖 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info")                          
-                ],[
-                    InlineKeyboardButton('📌 Gʀᴏᴜᴘ & Cʜᴀɴɴᴇʟ Lɪɴᴋs 📌', callback_data='link')
-                ],[
-                    InlineKeyboardButton('🧿 Hᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('🧿 Hᴇʟᴘ', callback_data='help')                                            
+                ],[                    
+                    InlineKeyboardButton('🤖 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info"),
                     InlineKeyboardButton('😎 Aʙᴏᴜᴛ', callback_data='about')                                                      
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -92,11 +90,9 @@ async def start(client, message):
                     InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('🔍 Sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-                    InlineKeyboardButton('🤖 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info")                          
-                ],[
-                    InlineKeyboardButton('📌 Gʀᴏᴜᴘ & Cʜᴀɴɴᴇʟ Lɪɴᴋs 📌', callback_data='link')
-                ],[
-                    InlineKeyboardButton('🧿 Hᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('🧿 Hᴇʟᴘ', callback_data='help')                                            
+                ],[                    
+                    InlineKeyboardButton('🤖 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info"),
                     InlineKeyboardButton('😎 Aʙᴏᴜᴛ', callback_data='about')                                                      
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -151,7 +147,7 @@ async def start(client, message):
                           InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
                           InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                        ],[
-                          InlineKeyboardButton('🤝 Sʜᴀʀᴇ Mᴇ', url=f'https://t.me/share/url?url=https://t.me/Oru_adaar_Robot')
+                          InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ', callback_data="close_data")
                          ]
                         ]
                     )
@@ -170,7 +166,7 @@ async def start(client, message):
                           InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
                           InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                        ],[
-                          InlineKeyboardButton('🤝 Sʜᴀʀᴇ Mᴇ', url=f'https://t.me/share/url?url=https://t.me/Oru_adaar_Robot')
+                          InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ', callback_data="close_data")
                          ]
                         ]
                     )
@@ -271,7 +267,7 @@ async def start(client, message):
                         InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
                         InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                      ],[
-                        InlineKeyboardButton('🤝 Sʜᴀʀᴇ Mᴇ', url=f'https://t.me/share/url?url=https://t.me/Oru_adaar_Robot')
+                        InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ', callback_data="close_data")
                      ]
                     ]
                 )
@@ -314,7 +310,7 @@ async def start(client, message):
                 InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
                 InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
              ],[
-                InlineKeyboardButton('🤝 Sʜᴀʀᴇ Mᴇ', url=f'https://t.me/share/url?url=https://t.me/Oru_adaar_Robot')
+                InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ', callback_data="close_data")
              ]
             ]
         )

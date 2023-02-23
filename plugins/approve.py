@@ -6,7 +6,7 @@ from pyrogram.types import Message, User, InlineKeyboardMarkup, InlineKeyboardBu
 from info import TEXT, SPELL_IMG
 
 @Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)
-async def approve(client, message, msg):
+async def approve(client, message):
     chat=message.chat 
     user=message.from_user 
     print(f"{user.first_name} Joined (Approved)") 
@@ -17,7 +17,7 @@ async def approve(client, message, msg):
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
             ]]
     await client.send_message(chat_id=message.from_user.id)
-    await msg.reply_photo(
+    await message.reply_photo(
         photo=SPELL_IMG, 
         caption=TEXT.format(mention=user.mention, title=chat.title),
         reply_markup=InlineKeyboardMarkup(buttons)

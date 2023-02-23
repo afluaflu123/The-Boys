@@ -44,9 +44,9 @@ async def start(client, message):
                     InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('🔍 Sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-                    InlineKeyboardButton('🧿 Hᴇʟᴘ', callback_data='help')                                            
+                    InlineKeyboardButton('🤖 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info")                                                             
                 ],[                    
-                    InlineKeyboardButton('🤖 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info"),
+                    InlineKeyboardButton('🧿 Hᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('😎 Aʙᴏᴜᴛ', callback_data='about')                                                      
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -90,9 +90,9 @@ async def start(client, message):
                     InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('🔍 Sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-                    InlineKeyboardButton('🧿 Hᴇʟᴘ', callback_data='help')                                            
+                    InlineKeyboardButton('🤖 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info")                                                             
                 ],[                    
-                    InlineKeyboardButton('🤖 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info"),
+                    InlineKeyboardButton('🧿 Hᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('😎 Aʙᴏᴜᴛ', callback_data='about')                                                      
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)

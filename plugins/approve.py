@@ -11,14 +11,11 @@ async def approve(client, message: ChatJoinRequest):
     user=message.from_user 
     print(f"{user.first_name} Joined (Approved)") 
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)  
-    await client.send_message(chat_id=message.from_user.id, user_id=user.id)
     buttons = [[
                 InlineKeyboardButton('🔮 Jᴏɪɴ Mᴏᴠɪᴇs Gʀᴏᴜᴘ 🔮', url='https://t.me/KL_GROUP1')
               ],[       
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
             ]]
-    await message.reply_photo(
-        photo=random.choice(PICS),
-        caption=TEXT.format(mention=user.mention, title=chat.title),
+    await client.send_message(chat_id=message.from_user.id, photo=random.choice(PICS), text=TEXT.format(mention=user.mention, title=chat.title),
         reply_markup=InlineKeyboardMarkup(buttons)
         )

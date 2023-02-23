@@ -1,8 +1,9 @@
 import os
 import asyncio, random
+from Script import script
 from pyrogram import Client, filters, errors
 from pyrogram.types import Message, User, InlineKeyboardMarkup, InlineKeyboardButton, ChatPermissions
-from info import TEXT
+from info import TEXT, SPELL_IMG
 
 @Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)
 async def approve(client, message):
@@ -15,8 +16,9 @@ async def approve(client, message):
               ],[       
                 InlineKeyboardButton('💥 Jᴏɪɴ Mᴏᴠɪᴇs Cʜᴀɴɴᴇʟ 💥', url='https://t.me/Team_KL')
             ]]
-    await client.send_message(
-        chat_id=message.from_user.id,       
-        text=TEXT.format(mention=user.mention, title=chat.title),
+    await client.send_message(chat_id=message.from_user.id, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
+    await msg.reply_photo(
+        photo=SPELL_IMG, 
+        caption=TEXT.format(mention=user.mention, title=chat.title),
         reply_markup=InlineKeyboardMarkup(buttons)
         )

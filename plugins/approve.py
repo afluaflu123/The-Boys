@@ -2,7 +2,7 @@ import os
 import asyncio, random
 from Script import script
 from pyrogram import Client, filters, errors
-from pyrogram.types import Message, User, InlineKeyboardMarkup, InlineKeyboardButton, ChatPermissions
+from pyrogram.types import Message, User, InlineKeyboardMarkup, InlineKeyboardButton, ChatJoinRequest
 from info import TEXT, PICS
 
 @Client.on_chat_join_request(filters.group | filters.channel & ~filters.private)

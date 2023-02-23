@@ -116,8 +116,8 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ Bᴏᴛ PM", url=f"https://t.me/{temp.U_NAME}"),
+                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
                     InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
                 ]
             )
@@ -125,8 +125,8 @@ async def next_page(bot, query):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ Bᴏᴛ PM", url=f"https://t.me/{temp.U_NAME}"),
+                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
                     InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
                 ]
             )
@@ -138,8 +138,8 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ Bᴏᴛ PM", url=f"https://t.me/{temp.U_NAME}"),
+                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
                     InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
                 ]
             )
@@ -147,8 +147,9 @@ async def next_page(bot, query):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
+                    InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
                 ]
             )
     try:
@@ -241,7 +242,7 @@ async def next_page(bot, query):
                     ],
                 )
     btn.insert(0, [
-        InlineKeyboardButton(f"🔰 {search}", "dupe"),
+        InlineKeyboardButton(f"🎀 {search}", "dupe"),
         InlineKeyboardButton(f"🗂️ Fɪʟᴇs: {len(files)}", "dupe")       
     ])
     try:
@@ -873,6 +874,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "sinfo":
         await query.answer(text=script.SINFO, show_alert=True)
 
+    elif query.data == "tinfo":
+        await query.answer(text=script.TINFO, show_alert=True)
+
     elif query.data == "start":
         buttons = [[
                     InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -1342,8 +1346,8 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ Bᴏᴛ PM", url=f"https://t.me/{temp.U_NAME}"),
+                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
                     InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
                 ]
             )
@@ -1351,8 +1355,8 @@ async def auto_filter(client, msg, spoll=False):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ Bᴏᴛ PM", url=f"https://t.me/{temp.U_NAME}"),
+                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
                     InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
                 ]
             )
@@ -1364,8 +1368,8 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ Bᴏᴛ PM", url=f"https://t.me/{temp.U_NAME}"),
+                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
                     InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
                 ]
             )
@@ -1373,14 +1377,14 @@ async def auto_filter(client, msg, spoll=False):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ Bᴏᴛ PM", url=f"https://t.me/{temp.U_NAME}"),
+                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
                     InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
                 ]
             )
 
     btn.insert(0, [
-        InlineKeyboardButton(f"🔰 {search}", "dupe"),
+        InlineKeyboardButton(f"🎀 {search}", "dupe"),
         InlineKeyboardButton(f"🗂️ Fɪʟᴇs: {len(files)}", "dupe")
     ])
 

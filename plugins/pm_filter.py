@@ -38,9 +38,20 @@ SPELL_CHECK = {}
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
-    k = await manual_filters(client, message)
-    if k == False:
-        await auto_filter(client, message)
+    if message.chat.id != SUPPORT_CHAT_ID:
+        await global_filters(client, message)
+    manual = await manual_filters(client, message)
+    if manual == False:
+        settings = await get_settings(message.chat.id)
+        try:
+            if settings['auto_ffilter']:
+                await auto_filter(client, message)
+        except KeyError:
+            grpid = await active_connection(str(message.from_user.id))
+            await save_group_settings(grpid, 'auto_ffilter', True)
+            settings = await get_settings(message.chat.id)
+            if settings['auto_ffilter']:
+                await auto_filter(client, message) 
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
@@ -1326,7 +1337,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"❍ [{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -1339,58 +1350,25 @@ async def auto_filter(client, msg, spoll=False):
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
+                    text=f"❍ {get_size(file.file_size)}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
             ]
             for file in files
         ]
-
-    try:
-        if settings['auto_delete']:
-            btn.insert(0, 
-                [
-                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
-                    InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
-                ]
-            )
-
-        else:
-            btn.insert(0, 
-                [
-                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
-                    InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
-                ]
-            )
-                
-    except KeyError:
-        grpid = await active_connection(str(message.from_user.id))
-        await save_group_settings(grpid, 'auto_delete', True)
-        settings = await get_settings(message.chat.id)
-        if settings['auto_delete']:
-            btn.insert(0, 
-                [
-                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
-                    InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
-                ]
-            )
-
-        else:
-            btn.insert(0, 
-                [
-                    InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
-                    InlineKeyboardButton("Cʜᴇᴄᴋ PM", url=f"https://t.me/{temp.U_NAME}"),
-                    InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
-                ]
-            )
-
-    btn.insert(0, [
-        InlineKeyboardButton(f"🎀 {search}", "dupe"),
-        InlineKeyboardButton(f"🗂️ Fɪʟᴇs: {len(files)}", "dupe")
-    ])
+    btn.insert(0, 
+        [
+            InlineKeyboardButton(f' 💢 {search} 💢 ', 'qinfo')
+        ]
+    )
+    btn.insert(1, 
+         [
+             InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+             InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+             InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo'),
+             InlineKeyboardButton(f'ᴛɪᴘs', 'tinfo')
+         ]
+    )
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"

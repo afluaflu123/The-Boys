@@ -56,8 +56,7 @@ SPELL_IMG = environ.get('SPELL_IMG',"https://te.legra.ph/file/e5fd8c6bc6580bea9f
 # Welcome area
 MELCOW_IMG = environ.get('MELCOW_IMG',"https://telegra.ph/file/4cd231fbe9085ec49e75d.jpg")
 MELCOW_VID = environ.get('MELCOW_VID',"https://telegra.ph/file/b26637d70f3630a7e0fa1.mp4")
-
-
+TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>Hello 👋 {mention}\n\nYour Request To Join {title} Was Approved 🔥.</b>\n\n<b>•➤ JOIN:- @Team_KL -|- @KL_GROUP1</b>")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', 'None').split()]

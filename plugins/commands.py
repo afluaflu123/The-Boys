@@ -144,7 +144,17 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                         [
+                          InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
+                          InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                       ],[
+                          InlineKeyboardButton("⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data="close_data")
+                         ]
+                        ]
                     )
+                )                    
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
@@ -153,7 +163,17 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                         [
+                          InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
+                          InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                       ],[
+                          InlineKeyboardButton("⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data="close_data")
+                         ]
+                        ]
                     )
+                )
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
@@ -214,7 +234,17 @@ async def start(client, message):
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                     [
+                      InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
+                      InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                   ],[
+                      InlineKeyboardButton("⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data="close_data")
+                     ]
+                    ]
                 )
+            )
             filetype = msg.media
             file = getattr(msg, filetype)
             title = file.file_name
@@ -245,11 +275,19 @@ async def start(client, message):
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
-        caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('❤️‍🔥 ᴊᴏɪɴ ᴛᴏ ᴄʜᴀɴɴᴇʟ ❤️‍🔥', url=(MAIN_CHANNEL)) ] ] ),
+        caption=f_caption,       
         protect_content=True if pre == 'filep' else False,
+        reply_markup=InlineKeyboardMarkup(
+            [
+             [
+              InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
+              InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+           ],[
+              InlineKeyboardButton("⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data="close_data")
+             ]
+            ]
         )
-                    
+    )                           
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):

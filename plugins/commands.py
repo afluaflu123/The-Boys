@@ -8,7 +8,7 @@ from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
 from database.users_chats_db import db
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, MSG_ALRT, MAIN_CHANNEL
+from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, MSG_ALRT, MAIN_CHANNEL, S_GROUP
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp
 from database.connections_mdb import active_connection
 import re
@@ -22,8 +22,8 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                InlineKeyboardButton('⚜️ Cʜᴀɴɴᴇʟ', url=CHNL_LNK),
-                InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
+                InlineKeyboardButton('⚜️ Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL),
+                InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=S_GROUP),
             ],[        
                 InlineKeyboardButton('⚙️ Hᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
                 InlineKeyboardButton('🔐 Cʟᴏsᴇ', callback_data="close_data"),            
@@ -147,8 +147,8 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
-                          InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=S_GROUP),
+                          InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL)
                        ],[
                           InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data='close_data')
                          ]
@@ -166,8 +166,8 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
-                          InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=S_GROUP),
+                          InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL)
                        ],[
                           InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data='close_data')
                          ]
@@ -237,8 +237,8 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
-                      InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                      InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=S_GROUP),
+                      InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL)
                    ],[
                       InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data='close_data')
                      ]
@@ -280,8 +280,8 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
-              InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+              InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=S_GROUP),
+              InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=MAIN_CHANNEL)
            ],[
               InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data='close_data')
              ]

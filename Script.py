@@ -290,26 +290,20 @@ Name - {}
 Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴀɢɪᴄ ᴏʀ ʀᴇᴀᴅ ᴍᴏʀᴇ ғʀᴏᴍ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ
 </b>"""
     IMDB_TEMPLATE_TXT = """
-<b>🔖 ᴛɪᴛʟᴇ :<a href={url}>{title}</a>
+<b>📺 TɪᴛLᴇ : {title}
+📆 YᴇAʀ : {release_date}
+🎙 LᴀNɢUᴀGᴇ : {languages}
+⭐ RᴀTɪNɢ : {rating} / 10.0
+🎭 GᴇNʀEs : {genres}
+⏱️ RᴜɴTɪᴍE : {runtime}minutes
+💽 QᴜAʟIᴛY : HDRip,WEB-DL
+💈 GʀOᴜP : {message.chat.title}</b>"""
 
-🎭 ɢᴇɴʀᴇs : {genres}
-🎖 ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10 (ʙᴀsᴇᴅ ᴏɴ {votes} ᴜsᴇʀ ʀᴀᴛɪɴɢ.)
+    CUSTOM_FILE_CAPTION = """<b>📂 Fɪʟᴇ Nᴀᴍᴇ :- <code>{file_name}</code>
 
-📆 ʏᴇᴀʀ : {release_date}
-🗞 ʟᴀɴɢᴜᴀɢᴇ : {languages}
-🌎 ᴄᴏᴜɴᴛʀʏ : {countries}
+🧲 Fɪʟᴇ Sɪᴢᴇ :- {file_size}
 
-📖 sᴛᴏʀʏ : {Plot}
-
-©{message.chat.title}</b>
-"""
-
-    CUSTOM_FILE_CAPTION = """<b>📂Fɪʟᴇɴᴀᴍᴇ : <code>{file_name}</code>
-
-╔═════•✧❅✦❅✧•═════╗
-▣ <a href=https://t.me/cinemathattakam_Group>[CT™] 📽സിനിമ തട്ടകം​</a>
-▣ <a href=https://t.me/CT_Arena>[CT™] 📽സിനിമ തട്ടകം​</a>
-╚═════•✧❅✦❅✧•═════╝</b>"""
+🔰 Jᴏɪɴ :- @Team_KL | @KL_GROUP1</b>"""
 
     RESTART_TXT = """
 <b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
@@ -351,11 +345,11 @@ Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴀɢ�
 𝖤𝗑𝖺𝗆𝗉𝗅𝖾 :- <code>/country India</code>"""
 
     OWNER_INFO = """
-<b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟
+<b>⍟───[ Oᴡɴᴇʀ Dᴇᴛᴀɪʟꜱ ]───⍟
     
-• ꜰᴜʟʟ ɴᴀᴍᴇ :『🔱』Dr.സാത്താൻ 🆇🄰🆅🄸🅴🅁 𝗞Ǥ𝗙 ​
-• ᴜꜱᴇʀɴᴀᴍᴇ : @Sathan_Of_Telegram
-• ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='t.me/Sathan_Of_Telegram'>Dr.സാത്താൻ</a></b>"""
+• Fᴜʟʟ Nᴀᴍᴇ : • HᴀᴄKᴇʀ Jʀ ~ 🕊 •
+• Uꜱᴇʀɴᴀᴍᴇ : @Hacker_Jr
+• Pᴇʀᴍᴀɴᴇɴᴛ Dᴍ Lɪɴᴋ : <a href='t.me/Hacker_Jr'>Dr.സാത്താൻ</a></b>"""
 
     GROUP_INFO = """
 <b>⍟ Cʜᴀɴɴᴇʟs & Gʀᴏᴜᴘs Mᴏᴅᴜʟᴇ ⍟</b>

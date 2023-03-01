@@ -150,7 +150,7 @@ async def start(client, message):
                           InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
                           InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                        ],[
-                          InlineKeyboardButton("⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data="close_data")
+                          InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data='close_data')
                          ]
                         ]
                     )
@@ -169,7 +169,7 @@ async def start(client, message):
                           InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
                           InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                        ],[
-                          InlineKeyboardButton("⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data="close_data")
+                          InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data='close_data')
                          ]
                         ]
                     )
@@ -240,7 +240,7 @@ async def start(client, message):
                       InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
                       InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                    ],[
-                      InlineKeyboardButton("⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data="close_data")
+                      InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data='close_data')
                      ]
                     ]
                 )
@@ -283,7 +283,7 @@ async def start(client, message):
               InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
               InlineKeyboardButton('📣 Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
            ],[
-              InlineKeyboardButton("⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data="close_data")
+              InlineKeyboardButton('⚠️ Dᴇʟᴇᴛᴇ Fɪʟᴇ ⚠️', callback_data='close_data')
              ]
             ]
         )

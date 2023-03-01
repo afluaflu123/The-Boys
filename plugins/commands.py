@@ -111,12 +111,6 @@ async def start(client, message):
             parse_mode=enums.ParseMode.HTML
         )
         return
-    kk, file_id = message.command[1].split("_", 1) if "_" in message.command[1] else (False, False)
-    pre = ('checksubp' if kk == 'filep' else 'checksub') if kk else False
-
-    status = await ForceSub(client, message, file_id=file_id, mode=pre)
-    if not status:
-        return
     data = message.command[1]
     if not file_id:
         file_id = data

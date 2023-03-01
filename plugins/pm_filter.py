@@ -58,7 +58,7 @@ async def fil_mod(client, message):
       else:
           await m.edit("𝚄𝚂𝙴 :- /autofilter on 𝙾𝚁 /autofilter off")
 
-@Client.on_message(filters.group | filters.private) 
+@Client.on_message(filters.group & filters.text & filters.incoming) 
 async def give_filter(client,message):
     await global_filters(client, message)
     group_id = message.chat.id
@@ -155,7 +155,8 @@ async def next_page(bot, query):
         ]
     btn.insert(0, 
         [
-            InlineKeyboardButton(f' 🎬 {search} 🎬 ', 'qinfo')
+            InlineKeyboardButton(f"🎀 {search}", "dupe"),
+            InlineKeyboardButton(f"🗂️ Fɪʟᴇs: {len(files)}", "dupe")       
         ]
     )
     btn.insert(1, 
@@ -1143,7 +1144,8 @@ async def auto_filter(client, msg, spoll=False):
         ]
     btn.insert(0, 
         [
-            InlineKeyboardButton(f' 🎬 {search} 🎬 ', 'qinfo')
+            InlineKeyboardButton(f"🎀 {search}", "dupe"),
+            InlineKeyboardButton(f"🗂️ Fɪʟᴇs: {len(files)}", "dupe")       
         ]
     )
     btn.insert(1, 

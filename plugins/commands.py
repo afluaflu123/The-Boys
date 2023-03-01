@@ -21,14 +21,13 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        buttons = [
-            [
-                InlineKeyboardButton('🤖 Updates', url=(MAIN_CHANNEL))
-            ],
-            [
-                InlineKeyboardButton('ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            ]
-            ]
+        buttons = [[
+                InlineKeyboardButton('⚜️ Cʜᴀɴɴᴇʟ', url=CHNL_LNK),
+                InlineKeyboardButton('🎭 Gʀᴏᴜᴘ', url=GRP_LNK),
+            ],[        
+                InlineKeyboardButton('⚙️ Hᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('🔐 Cʟᴏsᴇ', callback_data="close_data"),            
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
         await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
@@ -42,19 +41,17 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('💫 ᴄʀᴇᴅɪᴛs 💫', callback_data="credit_info"),
-            InlineKeyboardButton('🔱 ᴏᴡɴᴇʀ 🔱', callback_data="owner_info")
-            ],[      
-            InlineKeyboardButton('⚠️ ʜᴇʟᴘ ⚠️ ', callback_data='help2'),
-            InlineKeyboardButton('✨ ᴀʙᴏᴜᴛ ✨', callback_data='about')
-            ],[
-            InlineKeyboardButton('🥇 sᴜᴘᴘᴏʀᴛ 🥇', callback_data="group_info")
-        ]]         
+                    InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                ],[
+                    InlineKeyboardButton('🔍 Sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
+                    InlineKeyboardButton('🤖 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info")                                                             
+                ],[                    
+                    InlineKeyboardButton('🧿 Hᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('😎 Aʙᴏᴜᴛ', callback_data='about')                                                      
+                  ]]                                        
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgUAAxkBAAEOZdNj2S9tlg8fCuHg5gJ_MLJj3A3GXwACGAcAAimzaVe-HiqPelAOoB4E") 
-        await asyncio.sleep(3)
+        m=await message.reply_sticker("CAACAgUAAxkBAAINdmL9uWnC3ptj9YnTjFU4YGr5dtzwAAIEAAPBJDExieUdbguzyBAeBA")") 
+        await asyncio.sleep(2)
         await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -93,16 +90,14 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('💫 ᴄʀᴇᴅɪᴛs 💫', callback_data="credit_info"),
-            InlineKeyboardButton('🔱 ᴏᴡɴᴇʀ 🔱', callback_data="owner_info")
-            ],[      
-            InlineKeyboardButton('⚠️ ʜᴇʟᴘ ⚠️', callback_data='help2'),
-            InlineKeyboardButton('✨ ᴀʙᴏᴜᴛ ✨', callback_data='about')
-            ],[
-            InlineKeyboardButton('🥇 sᴜᴘᴘᴏʀᴛ 🥇', callback_data="group_info")
-        ]]         
+                    InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                ],[
+                    InlineKeyboardButton('🔍 Sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
+                    InlineKeyboardButton('🤖 Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info")                                                             
+                ],[                    
+                    InlineKeyboardButton('🧿 Hᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('😎 Aʙᴏᴜᴛ', callback_data='about')                                                      
+                  ]]         
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -351,12 +346,12 @@ async def delete_all_index(bot, message):
             [
                 [
                     InlineKeyboardButton(
-                        text="YES", callback_data="autofilter_delete"
+                        text="🤗 YES", callback_data="autofilter_delete"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        text="CANCEL", callback_data="close_data"
+                        text="🥺 CANCEL", callback_data="close_data"
                     )
                 ],
             ]

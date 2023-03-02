@@ -19,6 +19,6 @@ async def approve(client, message: ChatJoinRequest):
     await client.send_photo(
         photo="https://telegra.ph/file/39e246de80d814ff8bdfd.jpg",
         chat_id=message.from_user.id, 
-        text=TEXT.format(mention=user.mention, title=chat.title),
+        caption=TEXT.format(mention=user.mention, title=chat.title),
         reply_markup=InlineKeyboardMarkup(buttons)
         )   

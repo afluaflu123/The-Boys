@@ -1,12 +1,11 @@
 class script(object):
-    START_TXT ="""<b>Hᴇʏ {}, ɪᴍ  ᴀɴ Aᴡᴇsᴏᴍᴇ Aᴜᴛᴏ + Mᴀɴᴜᴀʟ Fɪʟᴛᴇʀ + Gʀᴏᴜᴘ Mᴀɴᴀɢᴇʀ Bᴏᴛ.
-    
+    START_TXT ="""<b>Hᴇʏ {}, ɪᴍ  ᴀɴ Aᴡᴇsᴏᴍᴇ Aᴜᴛᴏ + Mᴀɴᴜᴀʟ Fɪʟᴛᴇʀ + Gʀᴏᴜᴘ Mᴀɴᴀɢᴇʀ Bᴏᴛ.    
 Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴀɢɪᴄ ᴏʀ ʀᴇᴀᴅ ᴍᴏʀᴇ ғʀᴏᴍ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ<b>"""
     HELP_TXT = """<b>ʜᴇʏ {}
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ꜰᴏʀ ᴍʏ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs.</b>"""
+Hᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ꜰᴏʀ ᴍʏ ᴇxᴛʀᴀ ғᴇᴀᴛᴜʀᴇs.</b>"""
 
     HELPER_TXT = """<b>ʜᴇʏ {}
-ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ꜰᴏʀ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs.</b>"""
+Hᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ꜰᴏʀ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs.</b>"""
 
 
 # ⚠️ Please don't change our credits 𝚃𝙷𝙰𝙽𝙺𝚂 𝚃𝙾 & 𝙳𝙴𝚅 👇🏻
@@ -237,13 +236,11 @@ This module only works for my admins
 
 
     STATUS_TXT = """<b>── • ❰ 📂 Bot DB Status 📂❱ • ──
-📑 ғɪʟᴇs sᴀᴠᴇᴅ: <code>{}</code>
-👤 ᴛᴏᴛᴀʟ ᴜsᴇʀs: <code>{}</code>
-♻️ ᴛᴏᴛᴀʟ ᴄʜᴀᴛs: <code>{}</code>
-🗃️ ᴜsᴇᴅ sᴛᴏʀᴀɢᴇ: <code>{}</code> 𝙼𝚒𝙱
-🆓 ғʀᴇᴇ sᴛᴏʀᴀɢᴇ: <code>{}</code> 𝙼𝚒𝙱</b>
-
-🌀 DEVELOPER :<a href='https://t.me/Sathan_Of_Telegram'>CLICK HERE</a></b>"""
+📑 Fɪʟᴇs Sᴀᴠᴇᴅ: <code>{}</code>
+👤 Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
+♻️ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
+🗃️ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code> 𝙼𝚒𝙱
+🆓 Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code> 𝙼𝚒𝙱</b>"""
 
 
     CARB_TXT = """<b>Help</b> : 𝗖𝗔𝗥𝗕𝗢𝗡
@@ -296,7 +293,7 @@ Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴀɢ�
 🎭 GᴇNʀEs : {genres}
 ⏱️ RᴜɴTɪᴍE : {runtime}minutes
 💽 QᴜAʟIᴛY : HDRip,WEB-DL
-💈 GʀOᴜP : {message.chat.title}</b>"""
+🔰 GʀOᴜP : {message.chat.title}</b>"""
 
     CUSTOM_FILE_CAPTION = """<b>📂 Fɪʟᴇ Nᴀᴍᴇ :- <code>{file_name}</code>
 

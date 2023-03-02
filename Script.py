@@ -125,6 +125,14 @@ Translate text to speech
 • 𝗆𝗅 = 𝖬𝖺𝗅𝖺𝗒𝖺𝗅𝖺𝗆
 • 𝗁𝗂 = 𝖧𝗂𝗇𝖽𝗂"""
 
+    APPROVE_TXT = """<b>🤖 Hᴇʟᴘ: Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇ
+
+I'ᴍ Aɴ Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇ <a href='https://t.me/telegram/153'>Aᴅᴍɪɴ Jᴏɪɴ Rᴇǫᴜᴇsᴛs Bᴏᴛ</a>.
+
+Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀɴɴᴇʟs Aɴᴅ Gʀᴏᴜᴘs Mᴇ Tᴏ Aᴅᴍɪɴ Wɪᴛʜ Aᴅᴅ Mᴇᴍʙᴇʀs Pᴇʀᴍɪssɪᴏɴ. ☺️
+
+Jᴏɪɴ Rᴇǫᴜᴇsᴛs Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ. 😍</b>"""
+
     TELE_TXT = """<b>▫️HELP: Telegraph▪️</b>
 Do as you wish with telegra.ph module!
 </b>USAGE:</b>
@@ -236,6 +244,7 @@ This module only works for my admins
 
 
     STATUS_TXT = """<b>── • ❰ 📂 Bot DB Status 📂❱ • ──
+
 📑 Fɪʟᴇs Sᴀᴠᴇᴅ: <code>{}</code>
 👤 Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
 ♻️ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>

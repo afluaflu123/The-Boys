@@ -684,6 +684,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "coct":
+        buttons = [[
+            InlineKeyboardButton('⇍Bᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.CONNECTION_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "extra":
         buttons = [[
             InlineKeyboardButton('⇍Bᴀᴄᴋ', callback_data='help'),
@@ -782,7 +792,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "stats":
         buttons = [[
-            InlineKeyboardButton('⇍Bᴀᴄᴋ', callback_data='help2'),
+            InlineKeyboardButton('⇍Bᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('↺ Rᴇғʀᴇsʜ', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -801,7 +811,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "rfrsh":
         await query.answer("𝙁𝙚𝙩𝙘𝙝𝙞𝙣𝙜 𝙈𝙤𝙣𝙜𝙤𝘿𝙗 𝘿𝙖𝙩𝙖𝘽𝙖𝙨𝙚")
         buttons = [[
-            InlineKeyboardButton('⇍Bᴀᴄᴋ', callback_data='help2'),
+            InlineKeyboardButton('⇍Bᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('↺ Rᴇғʀᴇsʜ', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -946,10 +956,10 @@ async def auto_filter(client, msg, spoll=False):
     )
     btn.insert(1, 
          [
-             InlineKeyboardButton(f'📮 ɪɴꜰᴏ', 'reqinfo'),
-             InlineKeyboardButton(f'📟 ᴍᴏᴠɪᴇ', 'minfo'),
-             InlineKeyboardButton(f'🔰 sᴇʀɪᴇs', 'sinfo'),
-             InlineKeyboardButton(f'🎁 ᴛɪᴘs', 'tinfo')
+             InlineKeyboardButton(f'Iɴꜰᴏ', 'reqinfo'),
+             InlineKeyboardButton(f'Mᴏᴠɪᴇ', 'minfo'),
+             InlineKeyboardButton(f'Sᴇʀɪᴇs', 'sinfo'),
+             InlineKeyboardButton(f'Tɪᴘs', 'tinfo')
          ]
     )
 
@@ -1000,7 +1010,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"🔮 ᴛɪᴛɪʟᴇ {search}\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\n😈 ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}"
+        cap = f"🔮 Tɪᴛɪʟᴇ {search}\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\n😈 ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}"
     if imdb and imdb.get('poster'):
         try:
             pic_fi=await message.reply_photo(photo="https://telegra.ph/file/a35355b224548e197f989.jpg", caption=cap[:1024],

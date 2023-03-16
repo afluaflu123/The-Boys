@@ -1,5 +1,3 @@
-#https://github.com/Joelkb/DQ-the-file-donor
-
 import re
 import logging
 from pyrogram import Client, filters
